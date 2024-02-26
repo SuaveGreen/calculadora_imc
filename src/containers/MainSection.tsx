@@ -66,12 +66,12 @@ export function MainSection() {
               <h2 className="">
                 Peso:
               </h2>
-              <input type="number" step={0.10} min={0} onChange={evento => setPeso(parseFloat(evento.target.value))} className="bg-slate-300 rounded-lg outline-none border-b-2 p-2 ml-2.5" />
+              <input type="number" placeholder="Ex: 82,5" step={0.10} min={0} onChange={evento => setPeso(parseFloat(evento.target.value))} className="bg-slate-300 placeholder-slate-600 rounded-lg outline-none border-b-2 p-2 ml-2.5" />
               <Ruler className="size-5 ml-5" />
               <h2 className="">
                 Altura:
               </h2>
-              <input type="number" min={0} step={0.10} onChange={evento => setAltura(parseFloat(evento.target.value))} className="bg-slate-300 outline-none p-2 rounded-lg" />
+              <input type="number" placeholder="Ex: 1,83" min={0} step={0.10} onChange={evento => setAltura(parseFloat(evento.target.value))} className="bg-slate-300 placeholder-slate-600 outline-none p-2 rounded-lg" />
             </form>
               <div className="text-center">
                 {calculaImc()}
