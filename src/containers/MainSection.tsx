@@ -8,40 +8,42 @@ export function MainSection() {
   const [peso, setPeso] = useState(0);
 
   const calculaImc =  () => {
-    const imc = (peso / (altura * altura)).toFixed(1);
+    const imcBruto = (peso / (altura * altura));
+    const imc = imcBruto.toFixed(1)
+
     console.log(imc)
 
-    if(imc < 18.5) {
+    if(imcBruto < 18.5) {
       return(
           <p>
             Seu IMC é: {imc}. Você está abaixo do peso.
           </p>
       )
-    } else if (imc >= 18.5 && imc <= 24.9) {
+    } else if (imcBruto >= 18.5 && imcBruto <= 24.9) {
       return (
         <p>
           Seu IMC é: {imc}. Você está na média.
         </p>
       )
-    } else if (imc >= 25 && imc <= 29.9) {
+    } else if (imcBruto >= 25 && imcBruto <= 29.9) {
       return (
         <p>
           Seu IMC é: {imc}. Você está com sobrepeso.
         </p>
       )
-    } else if (imc >= 30 && imc <= 34.9) {
+    } else if (imcBruto >= 30 && imcBruto <= 34.9) {
       return (
         <p>
           Seu IMC é: {imc}. Você está com obesidade de grau 1
         </p>
       )
-    } else if (imc >= 35 && imc <= 39.9) {
+    } else if (imcBruto >= 35 && imcBruto <= 39.9) {
       return (
         <p>
           Seu IMC é: {imc}. Você está com obesidade de grau 2
         </p>
       )
-    } else if (imc >= 40) {
+    } else if (imcBruto >= 40) {
       return (
         <p>
           Seu IMC é: {imc}. Você está com obesidade de grau 3
